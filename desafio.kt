@@ -31,7 +31,7 @@ fun main() {
     
     //Final de Usúarios Inscritos na Plataforma
     
-    //Início Conteúdos de Cada Usúarios
+    //Início Conteúdos de Cada Formação
     
     val conteudos_kotlin = listOf(
         ConteudoEducacional("Tratamento de Exceções em Kotlin", 120),  
@@ -43,26 +43,26 @@ fun main() {
         ConteudoEducacional("Programação Orientada a Objetos", 180)
     )
     
-    //Final Conteúdos de Cada Usúarios
+    //Final Conteúdos de Cada Formação
     
     //Início de Formações De cada Usúario
     
-    val formacao_usuario_kotlin = Formacao("Kotlin Back-end Developer", "Intermediário".uppercase(), conteudos_kotlin)
-    val formacao_usuario_PHP = Formacao("PHP Experience", "Avançado".uppercase(), conteudos_PHP)
+    val formacao_kotlin = Formacao("Kotlin Back-end Developer", "Intermediário".uppercase(), conteudos_kotlin)
+    val formacao_PHP = Formacao("PHP Experience", "Avançado".uppercase(), conteudos_PHP)
     
     
     //Final de Formações De cada Usúario
     
     //Início das Matriculações de Cada Usúario em Formações
     
-    formacao_usuario_kotlin.matricular(usuario1)
-    formacao_usuario_PHP.matricular(usuario2)
-    formacao_usuario_kotlin.matricular(usuario1) //Teste de duplicação
-    formacao_usuario_kotlin.matricular(usuario3)
+    formacao_kotlin.matricular(usuario1)
+    formacao_PHP.matricular(usuario2)
+    formacao_kotlin.matricular(usuario1) //Teste de duplicação
+    formacao_kotlin.matricular(usuario3)
     
     //Final das Matriculações de Cada Usúario em Formações
     
-    println("Inscritos na Formação Kotlin Back-end Developer: ${formacao_usuario_kotlin.inscritos.map {it.nome}}") //Imprimindo o Nome dos Inscritos na Formação Kotlin
-    println("Inscritos na Formação PHP Experience: ${formacao_usuario_PHP.inscritos.map {it.nome}}") //Imprimindo o Nome dos Inscritos na Formação PHP Experience
+    println("Inscritos na Formação Kotlin Back-end Developer: ${formacao_kotlin.inscritos.map {it.nome}}") //Imprimindo o Nome dos Inscritos na Formação Kotlin
+    println("Inscritos na Formação PHP Experience: ${formacao_PHP.inscritos.map {it.nome}}") //Imprimindo o Nome dos Inscritos na Formação PHP Experience
     
 }
